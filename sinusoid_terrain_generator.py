@@ -4,11 +4,11 @@ import numpy as np
 # generate x-axis array
 x = np.linspace(0, 20, 500)
 
-# noisy sinusoid function
+# 'parameterizing sine waves' function
 def terrain_detail(amplitude, frequency, detail, phase):
     return (amplitude/detail) * np.sin((x * frequency * detail) + (phase))
 
-# add sinusoids together
+# adding sines together
 y = terrain_detail(1, 1, 1, 0)
 y += terrain_detail(1, 1, 5, 5)
 y += terrain_detail(1, 1, 10, 6)
